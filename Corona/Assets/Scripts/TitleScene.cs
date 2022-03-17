@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class TitleScene : MonoBehaviour
 {
@@ -11,10 +10,13 @@ public class TitleScene : MonoBehaviour
         SceneManager.LoadScene("InGame");
     }
 
-
+    public void Stopped()
+    {
 #if UNITY_EDITOR
-    UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
     Application.Quit();
 #endif
+    }
+
 }
