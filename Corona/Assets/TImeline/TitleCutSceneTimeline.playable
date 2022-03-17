@@ -266,7 +266,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM vcam1
   - m_Version: 1
-    m_Start: 2.55
+    m_Start: 2.3
     m_ClipIn: 0
     m_Asset: {fileID: -7095993126827612328}
     m_Duration: 2.433333333333333

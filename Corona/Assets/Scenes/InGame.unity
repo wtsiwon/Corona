@@ -182,18 +182,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC751\uC560"
 --- !u!222 &106750576
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -280,8 +280,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329471772}
-  m_LocalRotation: {x: 0.16279256, y: 0.27435032, z: -0.047182932, w: 0.94657505}
-  m_LocalPosition: {x: -6.95, y: 5.7699976, z: -13.04}
+  m_LocalRotation: {x: 0.4271179, y: 0.44839227, z: -0.11563164, w: 0.77662355}
+  m_LocalPosition: {x: -4.91, y: 4.66, z: -14.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -436,8 +436,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354730438}
-  m_LocalRotation: {x: 0.16279256, y: 0.27435032, z: -0.047182932, w: 0.94657505}
-  m_LocalPosition: {x: -6.95, y: 5.7699976, z: -13.04}
+  m_LocalRotation: {x: 0.4271179, y: 0.44839227, z: -0.11563164, w: 0.77662355}
+  m_LocalPosition: {x: -4.91, y: 4.66, z: -14.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1579668615}
@@ -617,8 +617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -193}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 198, y: -192}
+  m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638481760
 MonoBehaviour:
@@ -1436,8 +1436,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142486012}
-  m_LocalRotation: {x: 0.16279256, y: 0.27435032, z: -0.047182932, w: 0.94657505}
-  m_LocalPosition: {x: -6.95, y: 5.7699976, z: -13.04}
+  m_LocalRotation: {x: 0.4271179, y: 0.44839227, z: -0.11563164, w: 0.77662355}
+  m_LocalPosition: {x: -4.91, y: 4.66, z: -14.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 911591109}
