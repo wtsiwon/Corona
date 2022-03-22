@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        Vector3 h = new Vector3(Input.GetAxisRaw("Horizental"), 0 , Input.GetAxisRaw("Vertical") * Speed * Time.deltaTime);
+        
         
 
     }
