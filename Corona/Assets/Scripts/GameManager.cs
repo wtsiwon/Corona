@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text healthText;
     [SerializeField] private Text painText;
     [SerializeField] private Text scoreText;
-    //[SerializeField] private SpawnManager spawnManager;
+    [SerializeField] private SpawnManager spawnManager;
 
     private void Start()
     {
@@ -75,5 +75,10 @@ public class GameManager : MonoBehaviour
     private void ReadEnemyData(int stageNum)
     {
         spawnManager.ReadEnemyData(Resources.Load<TextAsset>($"Stage{stageNum}_EnemyData").text);
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Ranking");
     }
 }

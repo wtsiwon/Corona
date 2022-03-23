@@ -13,6 +13,8 @@ public abstract class Enemy : MonoBehaviour
     public float atkDmg;
     [SerializeField] protected Transform firePos;
     [SerializeField] protected Bullet bulletObj;
+    [SerializeField] protected float bulletSpd;
+    [SerializeField] protected float bulletInterval;
 
     [Header("연속 공격 속성")]
     [SerializeField] private bool isUnlimitShotcnt;
@@ -32,7 +34,7 @@ public abstract class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         if (isUnlimitShotcnt) Invoke("Attack", 1f);
-        //else InvokeRepeating("Attack", 1f, bulle);
+        else InvokeRepeating("Attack", 1f, bulletInterval);
 
         Move();
     }
@@ -61,4 +63,51 @@ public abstract class Enemy : MonoBehaviour
         Instantiate(dieEffect).transform.position = transform.position;
         Destroy(gameObject);
     }
+
+    protected void WayShot()
+    {
+        firePos.LookAt(GameObject.Find("Player").transform.position);
+
+        Quaternion firstRotation = firePos.rotation;
+
+        firePos.Rotate(Vector3.up * -5 * (wayCnt / 2));
+
+        for (int i = 1; i < wayCnt; i++)
+        {
+            Bullet bullet = Instantiate(bulletObj);
+            bullet.transform.position = firePos.position;
+            bullet.SetBullet(atkDmg, firePos.forward, bulletSpd);
+            firePos.Rotate(Vector3.up * 5);
+        }
+
+        firePos.rotation = firstRotation;
+    }
+
+    protected void TornadoShot()
+    {
+        StartCoroutine(TornadoShotCoroutine());
+    }
+    private IEnumerator TornadoShotCoroutine()
+    {
+        firePos.LookAt(GameObject.Find("Player").transform.position);
+
+        while (true)
+        {
+            Quaternion firstRotation = firePos.rotation;
+
+            for (int i = 1; i < wayCnt; i++)
+            {
+                Bullet bullet = Instantiate(bulletObj);
+                bullet.transform.position = firePos.position;
+                bullet.SetBullet(atkDmg, firePos.forward, bulletSpd);
+                firePos.Rotate(Vector3.up * 360 / wayCnt);
+            }
+
+            firePos.rotation = firstRotation;
+            firePos.Rotate(Vector3.up * 5);
+        }
+        yield return new WaitForSeconds(continiousShotInterval);
+    }
 }
+
+
