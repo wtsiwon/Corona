@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
 
         rb.velocity = moveDir * (Input.GetKey(KeyCode.LeftShift) ? spd / 2 : spd);
         rb.position = new Vector3(
-            Mathf.Clamp(rb.position.x, moveRange.xMax, moveRange.xMax),
+            Mathf.Clamp(rb.position.x, moveRange.xMin, moveRange.xMax),
             0,
             Mathf.Clamp(rb.position.z, moveRange.zMin, moveRange.zMax));
         #endregion

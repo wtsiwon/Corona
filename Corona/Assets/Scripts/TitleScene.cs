@@ -10,12 +10,12 @@ public class TitleScene : MonoBehaviour
 
     public void OnClickStartButton()
     {
-        SoundManager.Instance.PlaySound(Sound_Effect.PRESS_BUTTON);
+        //SoundManager.Instance.PlaySound(Sound_Effect.PRESS_BUTTON);
 
         titleUI.SetActive(false);
 
         title_pd.Stop();
-        //start_pd.Play();
+        start_pd.Play();
     }
     public void MoveInGameScene()
     {
