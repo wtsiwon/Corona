@@ -498,9 +498,9 @@ MonoBehaviour:
   firePos: {fileID: 329562756}
   bulletObj: {fileID: 0}
   hitEffect: {fileID: 0}
-  hitShield: {fileID: 0}
-  frontViewCam: {fileID: 0}
-  topViewCam: {fileID: 0}
+  hitShield: {fileID: 289346036}
+  frontViewCam: {fileID: 851045405}
+  topViewCam: {fileID: 2126450288}
 --- !u!1 &216013115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,11 +3705,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126450288}
-  m_LocalRotation: {x: 0.24526134, y: -0.012788948, z: 0.0032291966, w: 0.9693673}
-  m_LocalPosition: {x: 0.5628218, y: 12.532184, z: -22.293507}
+  m_LocalRotation: {x: 0.5822874, y: -0.01072674, z: 0.007676064, w: 0.81287605}
+  m_LocalPosition: {x: 0, y: 5, z: 5.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1043208460}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 71.23, y: -1.514, z: -0.002}

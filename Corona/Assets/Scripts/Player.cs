@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         bulletTime = Time.time;
-        hitShield.SetActive(false);
+        //hitShield.SetActive(false);
     }
 
     private void Update()
