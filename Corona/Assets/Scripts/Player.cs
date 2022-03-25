@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
         #endregion
 
         #region ¿Ãµø
-        Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         rb.velocity = moveDir * (Input.GetKey(KeyCode.LeftShift) ? spd / 2 : spd);
         rb.position = new Vector3(
