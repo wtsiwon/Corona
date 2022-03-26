@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[System.Serializable]
 public struct MoveRange
 {
     public float xMin;
@@ -46,17 +47,17 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         bulletTime = Time.time;
-        //hitShield.SetActive(false);
+        hitShield.SetActive(false);
     }
 
     private void Update()
     {
         #region 총 발사
-        if(Input.GetKey(KeyCode.Space) && Time.time > bulletTime)
+        if (Input.GetMouseButton(0) && Time.time > bulletTime)
         {
             bulletTime = Time.time + bulletInterval;
             //SoundManager.Instance.PlayerSound(Sound_Effect.SHOT);
-            Bullet bullet = Instantiate(bulletObj, firePos.position,bulletObj.transform.rotation);
+            Bullet bullet = Instantiate(bulletObj, firePos.position, bulletObj.transform.rotation);
             bullet.SetBullet(atkDmg, bulletObj.dir, bulletSpd);
         }
         #endregion
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
     {
         #region 회전
         float h = Input.GetAxisRaw("Horizontal");
-        if(Mathf.Approximately(h, 0))
+        if (Mathf.Approximately(h, 0))//0인가?
         {
             rotationZ = Mathf.Lerp(rotationZ, 0, Time.deltaTime * 2f);
         }
@@ -127,7 +128,7 @@ public class Player : MonoBehaviour
 
             GameManager.Instance.Health = Mathf.Max(0, GameManager.Instance.Health - other.GetComponent<Enemy>().atkDmg / 2f);
 
-            if(Mathf.Approximately(GameManager.Instance.Health, 0))
+            if (Mathf.Approximately(GameManager.Instance.Health, 0))
             {
                 OnDie();
             }
@@ -160,3 +161,4 @@ public class Player : MonoBehaviour
         GameManager.Instance.GameOver();
     }
 }
+

@@ -525,7 +525,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!135 &201006476
 SphereCollider:
@@ -572,14 +572,19 @@ MonoBehaviour:
   atkLevel: 1
   spd: 10
   atkDmg: 5
-  bulletSpd: 5
-  bulletInterval: 10
+  bulletSpd: 500
+  bulletInterval: 1
   firePos: {fileID: 329562756}
-  bulletObj: {fileID: 0}
+  bulletObj: {fileID: 2211059283042106301, guid: fcff261bf4116a54f830fae3cf1b3154, type: 3}
   hitEffect: {fileID: 0}
   hitShield: {fileID: 289346036}
   frontViewCam: {fileID: 851045405}
   topViewCam: {fileID: 2126450288}
+  moveRange:
+    xMin: -15
+    xMax: 15
+    zMin: 10
+    zMax: 40
 --- !u!1 &216013115
 GameObject:
   m_ObjectHideFlags: 0
