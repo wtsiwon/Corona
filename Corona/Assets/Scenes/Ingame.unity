@@ -572,8 +572,8 @@ MonoBehaviour:
   atkLevel: 1
   spd: 10
   atkDmg: 5
-  bulletSpd: 500
-  bulletInterval: 1
+  bulletSpd: 50
+  bulletInterval: 0.3
   firePos: {fileID: 329562756}
   bulletObj: {fileID: 2211059283042106301, guid: fcff261bf4116a54f830fae3cf1b3154, type: 3}
   hitEffect: {fileID: 0}

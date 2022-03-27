@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [HideInInspector] public float dmg;
-    [HideInInspector] public Vector3 dir;
+    public Vector3 dir;
     [HideInInspector] public float spd;
 
     private Rigidbody rb;
