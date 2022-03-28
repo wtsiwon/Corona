@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
+    
 
     [SerializeField] private int stageNum;
     private float health;
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private SpawnManager spawnManager;
 
+    
     private void Start()
     {
         Health = 100;
@@ -74,7 +76,8 @@ public class GameManager : MonoBehaviour
 
     private void ReadEnemyData(int stageNum)
     {
-        //spawnManager.ReadEnemyData(Resources.Load<TextAsset>($"Stage{stageNum}_EnemyData").text);
+        spawnManager.ReadEnemyData(
+            Resources.Load<TextAsset>($"Stage{stageNum}_EnemyData1").text);
     }
 
     public void GameOver()

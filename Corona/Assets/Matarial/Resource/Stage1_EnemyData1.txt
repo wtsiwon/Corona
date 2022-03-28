@@ -1,0 +1,2 @@
+1,Virus,5
+2,Cancer,7

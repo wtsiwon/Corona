@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             Mathf.Clamp(rb.position.x, moveRange.xMin, moveRange.xMax),
             0,
             Mathf.Clamp(rb.position.z, moveRange.zMin, moveRange.zMax));
-        #endregion
+        #endregion;
     }
 
     private void OnTriggerEnter(Collider other)
