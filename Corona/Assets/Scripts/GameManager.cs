@@ -76,8 +76,7 @@ public class GameManager : MonoBehaviour
 
     private void ReadEnemyData(int stageNum)
     {
-        spawnManager.ReadEnemyData(
-            Resources.Load<TextAsset>($"Stage{stageNum}_EnemyData1").text);
+        spawnManager.ReadEnemyData(Resources.Load<TextAsset>($"Stage{stageNum}_EnemyData1").text);
     }
 
     public void GameOver()
