@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof(Collider))]
+[RequireComponent(typeof(Collider))]
 public abstract class Enemy : MonoBehaviour
 {
     [Header("개체 속성")]
@@ -41,7 +41,7 @@ public abstract class Enemy : MonoBehaviour
     protected abstract void Attack();
     private void Move()
     {
-        rb.velocity = Vector3.back * spd;
+        rb.velocity = Vector3.forward * spd;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -51,7 +51,7 @@ public abstract class Enemy : MonoBehaviour
             Instantiate(hitEffect).transform.position = other.transform.position;
 
             hp = Mathf.Max(0, hp - other.GetComponent<Bullet>().dmg);
-            if(hp == 0)
+            if (hp == 0)
             {
                 OnDie();
             }
@@ -105,8 +105,8 @@ public abstract class Enemy : MonoBehaviour
 
             firePos.rotation = firstRotation;
             firePos.Rotate(Vector3.up * 5);
+            yield return new WaitForSeconds(continiousShotInterval);
         }
-        yield return new WaitForSeconds(continiousShotInterval);
     }
 }
 

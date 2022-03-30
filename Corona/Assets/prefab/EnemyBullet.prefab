@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 5514421340115617164}
   - component: {fileID: 2285086656684883629}
   - component: {fileID: 6997182073652057359}
-  - component: {fileID: 2211059283042106301}
   - component: {fileID: 1819206156498459673}
   - component: {fileID: 4712678139794587345}
   m_Layer: 0
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 65fec640c8e48144fa1c07cb6cb9cc34, type: 2}
+  - {fileID: 2100000, guid: 07a26051dced11240aa500a47f09cc74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,21 +97,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.32310128
   m_Center: {x: 0, y: 0, z: 0.06643593}
---- !u!114 &2211059283042106301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609643174546527325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cf8140359a39a84f8bd049dd3ae626a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dmg: 0
-  dir: {x: 0, y: 0, z: 1}
-  spd: 0
 --- !u!54 &1819206156498459673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,5 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 0
-  dir: {x: 0, y: 0, z: 1}
+  dir: {x: 0, y: 0, z: -1}
   spd: 0

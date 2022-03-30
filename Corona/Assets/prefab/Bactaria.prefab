@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19782e1d6110b814498fcfaee81e0bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 0
-  hp: 0
+  spd: 5
+  hp: 1
   atkDmg: 0
   firePos: {fileID: 0}
   bulletObj: {fileID: 0}
