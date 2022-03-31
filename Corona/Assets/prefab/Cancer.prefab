@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d901a27232940db42907d38f58c289b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 4
+  spd: 5
   hp: 1
   atkDmg: 1
   firePos: {fileID: 3072976943966832088}
@@ -196,8 +196,8 @@ MonoBehaviour:
   shotCnt: 3
   continiousShotInterval: 2
   wayCnt: 4
-  hitEffect: {fileID: 0}
-  dieEffect: {fileID: 0}
+  hitEffect: {fileID: 7807745290478950139, guid: a08ef664ddd452441961ac7861b6a58e, type: 3}
+  dieEffect: {fileID: 1694595462443183527, guid: aeda432c6d2be9a49919590df0ff7a62, type: 3}
 --- !u!54 &7856713816088279858
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -264,8 +264,8 @@ MonoBehaviour:
   shotCnt: 0
   continiousShotInterval: 0
   wayCnt: 0
-  hitEffect: {fileID: 0}
-  dieEffect: {fileID: 0}
+  hitEffect: {fileID: 7807745290478950139, guid: a08ef664ddd452441961ac7861b6a58e, type: 3}
+  dieEffect: {fileID: 1694595462443183527, guid: aeda432c6d2be9a49919590df0ff7a62, type: 3}
 --- !u!54 &-6356549673668678128
 Rigidbody:
   m_ObjectHideFlags: 0
