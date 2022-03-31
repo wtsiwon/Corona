@@ -41,7 +41,7 @@ public abstract class Enemy : MonoBehaviour
     protected abstract void Attack();
     private void Move()
     {
-        rb.velocity = Vector3.forward * spd;
+        rb.velocity = Vector3.back * spd;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -109,5 +109,3 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 }
-
-
