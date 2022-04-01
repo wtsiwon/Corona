@@ -1,5 +1,6 @@
 1,virus,5
 2,cancer,7
+2,cancer,1
 3,virus,8
 4,cancer,9
 10,bacteria,1

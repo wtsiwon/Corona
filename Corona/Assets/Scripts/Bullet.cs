@@ -7,9 +7,12 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public float spd;
 
     private Rigidbody rb;
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+    void Start()
+    {
         rb.velocity = dir * spd;
     }
 
