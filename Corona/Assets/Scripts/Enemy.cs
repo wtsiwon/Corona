@@ -36,13 +36,17 @@ public abstract class Enemy : MonoBehaviour
         if (isUnlimitShotcnt) Invoke("Attack", 1f);
         else InvokeRepeating("Attack", 1f, bulletInterval);
 
-        Move();
+        #region ¿Ãµø
+        //rb.velocity = Vector3.back * spd;
+        #endregion
+       
+    }
+    private void Update()
+    {
+        transform.position += Vector3.back * spd * Time.deltaTime;
     }
     protected abstract void Attack();
-    private void Move()
-    {
-        rb.velocity = Vector3.back * spd;
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBullet"))
