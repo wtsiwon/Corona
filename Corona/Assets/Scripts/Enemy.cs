@@ -37,13 +37,13 @@ public abstract class Enemy : MonoBehaviour
         else InvokeRepeating("Attack", 1f, bulletInterval);
 
         #region ¿Ãµø
-        //rb.velocity = Vector3.back * spd;
+        rb.velocity = Vector3.back * spd;
         #endregion
        
     }
     private void Update()
     {
-        transform.position += Vector3.back * spd * Time.deltaTime;
+        //transform.position += Vector3.back * spd * Time.deltaTime;
     }
     protected abstract void Attack();
     
@@ -112,4 +112,10 @@ public abstract class Enemy : MonoBehaviour
             yield return new WaitForSeconds(continiousShotInterval);
         }
     }
+    private IEnumerator Auralionsol(int Cnt = 1,GameObject meteor)
+    {
+        
+        yield return
+    }
+    
 }
